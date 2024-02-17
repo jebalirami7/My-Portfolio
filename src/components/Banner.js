@@ -4,7 +4,7 @@ import headerImg from "../assets/img/devolopper-removebg-preview.png";
 import { Download } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import fileUrl from '../assets/img/angular.png'
+import fileUrl from '../assets/files/Mohamed Rami_Jebali_CV.pdf'
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
