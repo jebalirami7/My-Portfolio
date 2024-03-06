@@ -19,14 +19,6 @@ export const Projects = () => {
     //   }
     // },
     {
-      title: "Claasic Donkey Kong",
-      description: "A classic 2D game using Java and JavaFx.",
-      imgUrl: donkeyKong,
-      links: {
-        repo: "https://github.com/jebalirami7/Classic-Donkey-Kong",
-      }
-    },
-    {
       title: "Mesa Verde Bank",
       description: "Complaints Management Website For a Bank.",
       imgUrl: mesaVerde,
@@ -39,6 +31,17 @@ export const Projects = () => {
 
   const mobileProjects = [
     
+  ];
+
+  const desktopProjects = [
+    {
+      title: "Claasic Donkey Kong",
+      description: "A classic 2D game using Java and JavaFx.",
+      imgUrl: donkeyKong,
+      links: {
+        repo: "https://github.com/jebalirami7/Classic-Donkey-Kong",
+      }
+    },
   ];
 
   return (
@@ -60,6 +63,9 @@ export const Projects = () => {
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="second">Mobile Applications</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">Desktop Applications</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -103,6 +109,26 @@ export const Projects = () => {
                         </p>
                       }
                     </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      {
+                        desktopProjects.length > 0 ?
+                          <Row>
+                          {
+                            desktopProjects.map((project, index) => {
+                              return (
+                                  <ProjectCard
+                                  key={index}
+                                  {...project}
+                                  />
+                              )
+                            })
+                          }
+                        </Row> : 
+                        <p>
+                          No Apps At The Moment.
+                        </p>
+                      }
+                    </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
               </div>}
@@ -110,7 +136,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt=""></img>
+      {/* <img className="background-image-right" src={colorSharp2} alt=""></img> */}
     </section>
   )
 }

@@ -55,8 +55,8 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Mohamed Rami`} <span className="txt-rotate" data-rotate='[ "Software Engineer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
+                {/* <span className="tagline">Welcome to my Portfolio</span> */}
+                <h1>{`Hi! I'm Mohamed Rami`} <br/> <span className="txt-rotate" data-rotate='[ "Software Engineer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>
                     I am Mohamed Rami Jebali, a dedicated software engineering student with a passion for crafting innovative solutions. Currently, I am enrolled in a software engineering program, where I am gaining a solid foundation in programming, software development, and problem-solving.
                   </p>
