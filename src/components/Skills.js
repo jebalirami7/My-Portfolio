@@ -1,6 +1,5 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import colorSharp from "../assets/img/color-sharp.png";
 import react from "../assets/img/react.svg";
 import typescript from "../assets/img/typescript.png";
 import node from "../assets/img/node.png";
@@ -10,6 +9,8 @@ import github from "../assets/img/github.png";
 import figma from "../assets/img/figma.png";
 import postgres from "../assets/img/postgres.png";
 import angular from "../assets/img/angular.png";
+import mysql from "../assets/img/mysql.png";
+import springboot from "../assets/img/springboot.png";
 
 export const Skills = () => {
   const responsive = {
@@ -36,8 +37,10 @@ export const Skills = () => {
     { name: "Angular", image: angular },
     { name: "Node Js", image: node },
     { name: "TypeScript", image: typescript },
+    { name: "Spring Boot", image: springboot },
     { name: "MongoDB", image: mongo },
     { name: "Postgres", image: postgres },
+    { name: "MySQL", image: mysql },
     { name: "Git", image: git },
     { name: "GitHub", image: github },
     { name: "Figma", image: figma },
