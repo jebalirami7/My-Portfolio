@@ -1,18 +1,17 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/devolopper-removebg-preview.png";
+// import headerImg from "../assets/img/devolopper-removebg-preview.png";
 import { Download } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import fileUrl from '../assets/files/Mohamed Rami_Jebali_CV.pdf'
+import fileUrl from '../assets/files/Mohamed_Rami_Jebali_CV.pdf'
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(300);
   const toRotate = [ "Software Engineer", "Web Developer" ];
-  const period = 2000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -35,11 +34,11 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setDelta(period);
+      setDelta(500);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(300);
     }
   }
 
@@ -51,7 +50,7 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+          {/* <Col xs={12} md={6} xl={7}> */}
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
@@ -63,15 +62,15 @@ export const Banner = () => {
                   <button onClick={handleDownload}>My Resume <Download size={25} /></button>
               </div>}
             </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
+          {/* </Col> */}
+          {/* <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </section>

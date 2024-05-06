@@ -1,51 +1,72 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import donkeyKong from "../assets/img/projects/Classic-Donkey-Kong-Demo-Picture.png"
-import mesaVerde from "../assets/img/projects/acceuil-messa-verde.png"
+import donkeyKong from "../assets/img/projects/Donkey Kong/Classic-Donkey-Kong-Demo-Picture.png";
+import donkey1 from "../assets/img/projects/Donkey Kong/donkey1.png";
+import donkey2 from "../assets/img/projects/Donkey Kong/donkey2.png";
+import donkey3 from "../assets/img/projects/Donkey Kong/donkey3.png";
+import donkey4 from "../assets/img/projects/Donkey Kong/donkey4.png";
+import mesaVerde from "../assets/img/projects/Mesa Verde/acceuil-messa-verde.png"
+import mesa1 from "../assets/img/projects/Mesa Verde/mesa1.png"
+import mesa2 from "../assets/img/projects/Mesa Verde/mesa2.png"
+import mesa3 from "../assets/img/projects/Mesa Verde/mesa3.png"
+
+export const projects = [
+  // {
+  //   id: 1, 
+  //   type: "web",
+  //   title: "CPC Enicarthage",
+  //   description: "Problem Solving Platform",
+  //   mainImage: mesaVerde,
+  //   images: [
+  //     mesaVerde, mesaVerde, mesaVerde
+  //   ],
+  // date: "March 2024",
+  //   links: {
+  //     repo: "https://github.com/YassineBenAbdelaziz/CPC-Platform",
+  //     demo: "https://google.com"
+  //   }
+  // },
+  {
+    id: 2,
+    type: "web",
+    title: "Mesa Verde Bank",
+    description: "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
+    mainImage: mesaVerde,
+    images: [
+      mesaVerde, mesa1, mesa3, mesa2
+    ],
+    video: "https://github.com/jebalirami7/mesa-verde-bank/assets/138411253/a5f08b26-c3e7-4254-b9a1-5207f44d318d",
+    date: "October 2023 - December 2023",
+    links: {
+      repo: "https://github.com/jebalirami7/mesa-verde-bank",
+      demo: "https://webproject-pied.vercel.app/"
+    }
+  },
+  {
+    id: 3,
+    type: "desktop",
+    title: "Classic Donkey Kong",
+    description: `Classic Donkey Kong arcade game, built using Java and JavaFX for graphics.
+      In this game, players control Mario as they navigate through a series of increasingly challenging levels to rescue Princess Peach from the clutches of Donkey Kong. 
+      Dodge barrels, climb ladders, and leap over obstacles to reach the top of each level and confront Donkey Kong himself.`,
+    mainImage: donkeyKong,
+    images: [
+      donkeyKong, donkey1, donkey2, donkey3, donkey4
+    ],
+    video: "https://github.com/jebalirami7/Classic-Donkey-Kong/assets/138411253/5923a2a7-d9f9-44f3-b6c2-c3cdb9e75b31",
+    date: "October 2023 - December 2023",
+    links: {
+      repo: "https://github.com/jebalirami7/Classic-Donkey-Kong",
+    }
+  },
+];
 
 export const Projects = () => {
 
-  const webProjects = [
-    // {
-    //   title: "CPC Enicarthage",
-    //   description: "Problem Solving Platform",
-    //   imgUrl: projImg3,
-    //   links: {
-    //     repo: "https://github.com/YassineBenAbdelaziz/CPC-Platform",
-    //     demo: "https://google.com"
-    //   }
-    // },
-    {
-      title: "Mesa Verde Bank",
-      description: "Complaints Management Website For a Bank.",
-      imgUrl: mesaVerde,
-      links: {
-        repo: "https://github.com/jebalirami7/mesa-verde-bank",
-        demo: "https://webproject-pied.vercel.app/"
-      }
-    },
-  ];
-
-  const mobileProjects = [
-    
-  ];
-
-  const desktopProjects = [
-    {
-      title: "Claasic Donkey Kong",
-      description: "A classic 2D game using Java and JavaFx.",
-      imgUrl: donkeyKong,
-      links: {
-        repo: "https://github.com/jebalirami7/Classic-Donkey-Kong",
-      }
-    },
-  ];
-
   return (
-    <section className="project" id="projects">
+    <section className="projects" id="projects">
       <Container>
         <Row>
           <Col size={12}>
@@ -70,64 +91,46 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      {
-                        webProjects.length > 0 ?
-                          <Row>
-                          {
-                            webProjects.map((project, index) => {
+                    <Row>
+                        {
+                          projects.map((project, index) => {
+                            if (project.type === "web")
                               return (
-                                  <ProjectCard
-                                  key={index}
-                                  {...project}
-                                  />
+                                <ProjectCard key={index} {...project} />
                               )
-                            })
-                          }
-                        </Row> : 
-                        <p>
-                          No Apps At The Moment.
-                        </p>
-                      }
+                            else  
+                              return <div key={index}></div>
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      {
-                        mobileProjects.length > 0 ?
-                          <Row>
-                          {
-                            mobileProjects.map((project, index) => {
+                    <Row>
+                        {
+                          projects.map((project, index) => {
+                            if (project.type === "mobile")
                               return (
-                                  <ProjectCard
-                                  key={index}
-                                  {...project}
-                                  />
+                                <ProjectCard key={index} {...project} />
                               )
-                            })
-                          }
-                        </Row> : 
-                        <p>
-                          No Apps At The Moment.
-                        </p>
-                      }
+                            else  
+                              return <div key={index}></div>
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      {
-                        desktopProjects.length > 0 ?
-                          <Row>
-                          {
-                            desktopProjects.map((project, index) => {
+                      <Row>
+                        {
+                          projects.map((project, index) => {
+                            if (project.type === "desktop")
                               return (
-                                  <ProjectCard
-                                  key={index}
-                                  {...project}
-                                  />
+                                <ProjectCard key={index} {...project} />
                               )
-                            })
-                          }
-                        </Row> : 
-                        <p>
-                          No Apps At The Moment.
-                        </p>
-                      }
+                            else  
+                              return <div key={index}></div>
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

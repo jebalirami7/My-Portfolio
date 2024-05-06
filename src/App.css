@@ -272,13 +272,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 96%;
 }
 .banner button {
+  padding: 20px;
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 30px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+}
+.banner button:hover {
+  border: 1px solid #fff;
+  border-radius: 10px;
 }
 .banner button svg {
   font-size: 25px;
@@ -350,18 +355,103 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/************ Project Css ************/
+.project-page {
+  padding: 250px 100px 0 100px;
+  position: relative;
+  
+  .project-bx {
+    display: flex;
+    flex-direction: row-reverse;
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+  }
+  h2 {
+    font-size: 45px;
+    font-weight: 700;
+  }
+  p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 30px;
+  }
+  .item img,
+  .item video {
+    border-radius: 20px;
+  }
+  .project-slider {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+
+    li {
+      align-content: center;
+    }
+  }
+  .project-slider .item img,
+  .project-slider .item video {
+    width: 95%;
+    margin: 0 auto 15px auto;
+  }
+  .background-image-left {
+    top: 28%;
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    z-index: -4;
+  }
+  .project-details {
+    width: 50%;
+    align-content: center;
+
+    button {
+      padding: 10px;
+      border-radius: 20px;
+      margin: 5px;
+    }
+    .demo {
+      background-color: green;
+    }
+    .repo {
+      background-color: gray;
+    
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 250px 50px 0 50px;
+    .project-bx {
+      display: block;
+    }
+    .project-details {
+      margin-bottom: 40px;
+    }
+    .project-details,
+    .project-slider {
+      width: 100%;
+    }
+  }
+}
+
 /************ Projects Css ************/
-.project {
+.projects {
   padding: 80px 0;
   position: relative;
   background-color: black;
 }
-.project h2 {
+.projects h2 {
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
 }
-.project p {
+.projects p {
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
@@ -370,7 +460,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
-.project .nav.nav-pills {
+.projects .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
@@ -378,14 +468,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 @media (max-width: 768px) {
-  .project .nav.nav-pills {
+  .projects .nav.nav-pills {
     width: 100%;
   }
 }
-.project .nav.nav-pills .nav-item {
+.projects .nav.nav-pills .nav-item {
   width: 33.33%;
 }
-.project .nav.nav-pills .nav-link {
+.projects .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
@@ -400,7 +490,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
   cursor: pointer;
 }
-.project .nav.nav-pills .nav-link::before {
+.projects .nav.nav-pills .nav-link::before {
     content: "";
     position: absolute;
     width: 0;
@@ -411,10 +501,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     z-index: -1;
     transition: 0.3s ease-in-out;
 }
-.project .nav.nav-pills .nav-link.active::before {
+.projects .nav.nav-pills .nav-link.active::before {
     width: 100% !important;
 }
-/* .project .nav.nav-pills .nav-link.active {
+/* .projects .nav.nav-pills .nav-link.active {
     border: 1px solid rgba(255, 255, 255, 1);
 } */
 .nav-link#projects-tabs-tab-first {
@@ -438,6 +528,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: white; */
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -485,21 +576,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 20px
 }
 .proj-overlay button {
+  font-size: large;
+  font-weight: bold;
   margin: 5px;
-  padding: 5px 10px;
+  padding: 10px;
+  color: #fff;
+}
+.proj-overlay button:hover {
   border-radius: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.165);
-  /* color: #fff; */
-}
-.proj-overlay .demo {
-  background-color: green;
-}
-.proj-overlay .repo {
-  background-color: gray;
-
-  svg {
-    margin-right: 5px;
-  }
+  border: 2px solid #fff;
 }
 
 /************ Projects Css ************/
