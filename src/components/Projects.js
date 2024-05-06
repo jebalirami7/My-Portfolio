@@ -11,6 +11,7 @@ import mesaVerde from "../assets/img/projects/Mesa Verde/acceuil-messa-verde.png
 import mesa1 from "../assets/img/projects/Mesa Verde/mesa1.png"
 import mesa2 from "../assets/img/projects/Mesa Verde/mesa2.png"
 import mesa3 from "../assets/img/projects/Mesa Verde/mesa3.png"
+import mesa4 from "../assets/img/projects/Mesa Verde/mesa4.png"
 
 export const projects = [
   // {
@@ -35,7 +36,7 @@ export const projects = [
     description: "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
     mainImage: mesaVerde,
     images: [
-      mesaVerde, mesa1, mesa3, mesa2
+      mesaVerde, mesa1, mesa3, mesa2, mesa4
     ],
     video: "https://github.com/jebalirami7/mesa-verde-bank/assets/138411253/a5f08b26-c3e7-4254-b9a1-5207f44d318d",
     date: "October 2023 - December 2023",
