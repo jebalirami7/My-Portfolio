@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
-import Carousel from "react-multi-carousel";
 import { PlayFill, Github } from 'react-bootstrap-icons';
+import Carousel from "react-multi-carousel";
 import { projects } from "./Projects"
+import { useEffect, useRef } from "react";
 
 export const ProjectDetails = () => {
     const responsive = {
@@ -23,12 +24,25 @@ export const ProjectDetails = () => {
         },
     };
 
+    const videoRefs = useRef({});
+
+    const handleBeforeChange = (currentSlide, nextSlide) => {
+        console.log(videoRefs.current[0]);
+        // videoRefs.current[0].currentTime = 0;
+        videoRefs.current[0].pause();
+    };
+
+    useEffect(() => {
+        return () => {
+            videoRefs.current = {};
+        };
+    }, []);
+
     const {title} = useParams();
     let project = {};
     for (let prj of projects) {
         if (title === prj.title) {
             project = prj;
-            console.log(prj);
             break;
         }
     }
@@ -45,9 +59,11 @@ export const ProjectDetails = () => {
         <div className="project-page" id="project">
             <div className="project-bx wow zoomIn">
                 <div className="project-details">
-                    <h2>{project.title}</h2>
-                    <div className="date">
-                        {project.date}
+                    <div>
+                        <h2>{project.title}</h2>
+                        <div className="date">
+                            {project.date}
+                        </div>
                     </div>
                     <p>
                         {project.description}                   
@@ -66,6 +82,7 @@ export const ProjectDetails = () => {
                 <Carousel
                     responsive={responsive}
                     infinite={true}
+                    afterChange={handleBeforeChange}
                     className="owl-carousel owl-theme project-slider"
                 >
                     {project.images.map((image, index) => (
@@ -74,7 +91,15 @@ export const ProjectDetails = () => {
                     </div>
                     ))}
                     <div className="item">
-                        <video src={project.video} alt="video" controls />
+                        <video 
+                            src={project.video} 
+                            alt="video" 
+                            ref={el => videoRefs.current[0] = el} 
+                            onClick={() => {
+                                videoRefs.current[0].play();
+                            }}
+                            controls 
+                        />
                     </div>
                 </Carousel>
             </div>

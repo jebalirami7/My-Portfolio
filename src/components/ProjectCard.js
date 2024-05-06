@@ -1,12 +1,12 @@
 import { Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
-export const ProjectCard = ({ id, title, description, mainImage, links }) => {
+export const ProjectCard = ({ id, title, description, images, links }) => {
   return (
     <Col size={12} sm={6} md={4} style={{display: "flex", alignItems: "center"}}>
       {/* <a href={link} target="_blank"> */}
         <div className="proj-imgbx">
-          <img src={mainImage} alt=""/>
+          <img src={images[0]} alt=""/>
           <div className="proj-txtx">
             {/* <h4>{title}</h4>
             <span>{description}</span> */}

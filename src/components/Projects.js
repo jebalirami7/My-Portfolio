@@ -19,7 +19,6 @@ export const projects = [
   //   type: "web",
   //   title: "CPC Enicarthage",
   //   description: "Problem Solving Platform",
-  //   mainImage: mesaVerde,
   //   images: [
   //     mesaVerde, mesaVerde, mesaVerde
   //   ],
@@ -34,7 +33,6 @@ export const projects = [
     type: "web",
     title: "Mesa Verde Bank",
     description: "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
-    mainImage: mesaVerde,
     images: [
       mesaVerde, mesa1, mesa3, mesa2, mesa4
     ],
@@ -52,7 +50,6 @@ export const projects = [
     description: `Classic Donkey Kong arcade game, built using Java and JavaFX for graphics.
       In this game, players control Mario as they navigate through a series of increasingly challenging levels to rescue Princess Peach from the clutches of Donkey Kong. 
       Dodge barrels, climb ladders, and leap over obstacles to reach the top of each level and confront Donkey Kong himself.`,
-    mainImage: donkeyKong,
     images: [
       donkeyKong, donkey1, donkey2, donkey3, donkey4
     ],

@@ -7,11 +7,11 @@ import { Footer } from "./Footer";
 export const Home = () => {
   return (
     <div className="Home">
-        <Banner />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
+      <Banner />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }
