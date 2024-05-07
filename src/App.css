@@ -95,7 +95,11 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+  width: 9%;
+}
+nav.navbar .navbar-collapse {
+  width: 100%;
+  background-color: rgb(18, 18, 18);
 }
 nav.navbar .navbar-nav {
   align-items: center;
