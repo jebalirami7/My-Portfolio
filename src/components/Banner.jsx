@@ -10,7 +10,7 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300);
+  const [delta, setDelta] = useState(200);
   const toRotate = [ "Software Engineer", "Web Developer" ];
 
   useEffect(() => {
@@ -34,11 +34,11 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setDelta(500);
+      setDelta(300);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(300);
+      setDelta(200);
     }
   }
 
