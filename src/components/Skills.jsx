@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import react from "../assets/img/react.svg";
-import typescript from "../assets/img/typescript.png";
+// import typescript from "../assets/img/typescript.png";
 import node from "../assets/img/node.png";
 import mongo from "../assets/img/mongo.png";
 import git from "../assets/img/git.png";
@@ -36,10 +36,10 @@ export const Skills = () => {
     { name: "React Js", image: react },
     { name: "Angular", image: angular },
     { name: "Node Js", image: node },
-    { name: "TypeScript", image: typescript },
+    // { name: "TypeScript", image: typescript },
     { name: "Spring Boot", image: springboot },
-    { name: "MongoDB", image: mongo },
     { name: "Postgres", image: postgres },
+    { name: "MongoDB", image: mongo },
     { name: "MySQL", image: mysql },
     { name: "Git", image: git },
     { name: "GitHub", image: github },

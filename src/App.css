@@ -102,6 +102,8 @@ nav.navbar .navbar-collapse {
   background-color: rgb(18, 18, 18);
 }
 nav.navbar .navbar-nav {
+  padding: 25px 0;
+  margin: auto;
   align-items: center;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -112,9 +114,10 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   padding-bottom: 5px;
   font-size: 18px;
   opacity: 0.75;
+  cursor: pointer;
 }
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+nav.navbar .navbar-nav .nav-link.navbar-link:hover,
+nav.navbar .navbar-nav .nav-link.navbar-link.active {
     opacity: 1;
     border-bottom: 2px solid white;
 }
@@ -243,7 +246,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 260px 0 150px 0;
   /* background-image: url('./assets/img/bg.avif'); */
   background-position: top center;
   background-size: cover;
@@ -313,6 +316,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     }
 }
 .txt-rotate > .wrap {
+  color: #0087ff;
   border-right: 0.08em solid #666;
 }
 
@@ -343,7 +347,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 20px;
 }
 .skill-slider {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -480,6 +484,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 @media (max-width: 768px) {
+  .banner {
+    padding: 100px 0 150px 0;
+  }
   .projects .nav.nav-pills {
     width: 100%;
   }
@@ -539,7 +546,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #00ffb7 -5.91%, #0087ff 111.58%);
   /* background: white; */
   opacity: 0.85;
   position: absolute;
@@ -590,13 +597,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-overlay button {
   font-size: large;
   font-weight: bold;
-  border-radius: 15px;
-  margin: 5px;
-  padding: 10px;
+  border-bottom: 2px solid #fff;
+  padding: 5px;
   color: #fff;
-}
-.proj-overlay button:hover {
-  border: 2px solid #fff;
 }
 
 /************ Projects Css ************/

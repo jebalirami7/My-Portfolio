@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { BrowserRouter as Router } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 import linkedIn from "../assets/img/linkedIn.svg";
 import github from "../assets/img/github.svg";
-import { HashLink } from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -39,9 +38,9 @@ export const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav>
               <Nav.Link
-                href="#home"
+                href="/#home"
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
@@ -50,7 +49,7 @@ export const NavBar = () => {
                 Home
               </Nav.Link>
               <Nav.Link
-                href="#skills"
+                href="/#skills"
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
                 }
@@ -59,7 +58,7 @@ export const NavBar = () => {
                 Skills
               </Nav.Link>
               <Nav.Link
-                href="#projects"
+                href="/#projects"
                 className={
                   activeLink === "projects"
                     ? "active navbar-link"
@@ -87,11 +86,11 @@ export const NavBar = () => {
                   <img src={github} alt="Icon" />
                 </a>
               </div>
-              <HashLink to="#connect">
+              {/* <HashLink to="#connect">
                 <button className="vvd">
                   <span>Let’s Connect</span>
                 </button>
-              </HashLink>
+              </HashLink> */}
             </span>
           </Navbar.Collapse>
         </Container>

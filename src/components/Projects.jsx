@@ -28,6 +28,7 @@ export const projects = [
     id: 1, 
     type: "web",
     title: "CPC Enicarthage",
+    shortDescription: "A Problem Solving Platform.",
     description: `This platform is crafted as a problem-solving hub, enabling
       users to tackle challenges and engage in competitions to earn
       points. It's built with a modern tech stack: ReactJS, ExpressJS
@@ -46,6 +47,7 @@ export const projects = [
     id: 2,
     type: "desktop",
     title: "Classic Donkey Kong",
+    shortDescription: "A 2D Arcade Game.",
     description: `Classic Donkey Kong arcade game, built using Java and JavaFX for graphics.
       In this game, players control Mario as they navigate through a series of increasingly challenging levels to rescue Princess Peach from the clutches of Donkey Kong. 
       Dodge barrels, climb ladders, and leap over obstacles to reach the top of each level and confront Donkey Kong himself.`,
@@ -62,6 +64,7 @@ export const projects = [
     id: 3,
     type: "web",
     title: "Mesa Verde Bank",
+    shortDescription: "A Bank Customer Complaint Management System.",
     description: "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
     images: [
       mesaVerde, mesa1, mesa3, mesa2, mesa4
