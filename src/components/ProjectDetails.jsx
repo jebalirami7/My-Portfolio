@@ -38,10 +38,10 @@ export const ProjectDetails = () => {
         };
     }, []);
 
-    const {title} = useParams();
+    const {id} = useParams();
     let project = {};
     for (let prj of projects) {
-        if (title === prj.title) {
+        if (id == prj.id) {
             project = prj;
             break;
         }
@@ -82,6 +82,7 @@ export const ProjectDetails = () => {
                 <Carousel
                     responsive={responsive}
                     infinite={true}
+                    showDots={true}
                     afterChange={handleBeforeChange}
                     className="owl-carousel owl-theme project-slider"
                 >
@@ -90,17 +91,20 @@ export const ProjectDetails = () => {
                         <img src={image} alt="img" />{" "}
                     </div>
                     ))}
-                    <div className="item">
-                        <video 
-                            src={project.video} 
-                            alt="video" 
-                            ref={el => videoRefs.current[0] = el} 
-                            onClick={() => {
-                                videoRefs.current[0].play();
-                            }}
-                            controls 
-                        />
-                    </div>
+                    {
+                        project.video &&
+                        <div className="item">
+                            <video 
+                                src={project.video} 
+                                alt="video" 
+                                ref={el => videoRefs.current[0] = el} 
+                                onClick={() => {
+                                    videoRefs.current[0].play();
+                                }}
+                                controls 
+                            />
+                        </div>
+                    }
                 </Carousel>
             </div>
         </div>

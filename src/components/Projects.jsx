@@ -12,39 +12,38 @@ import mesa1 from "../assets/img/projects/Mesa Verde/mesa1.png"
 import mesa2 from "../assets/img/projects/Mesa Verde/mesa2.png"
 import mesa3 from "../assets/img/projects/Mesa Verde/mesa3.png"
 import mesa4 from "../assets/img/projects/Mesa Verde/mesa4.png"
+import cpc from '../assets/img/projects/CPC/cpc.png'
+import cpc1 from '../assets/img/projects/CPC/cpc1.png'
+import cpc2 from '../assets/img/projects/CPC/cpc2.png'
+import cpc3 from '../assets/img/projects/CPC/cpc3.png'
+import cpc4 from '../assets/img/projects/CPC/cpc4.png'
+import cpc5 from '../assets/img/projects/CPC/cpc5.png'
+import cpc6 from '../assets/img/projects/CPC/cpc6.png'
+import cpc7 from '../assets/img/projects/CPC/cpc7.png'
+import cpc8 from '../assets/img/projects/CPC/cpc8.png'
+import cpc9 from '../assets/img/projects/CPC/cpc9.png'
 
 export const projects = [
-  // {
-  //   id: 1, 
-  //   type: "web",
-  //   title: "CPC Enicarthage",
-  //   description: "Problem Solving Platform",
-  //   images: [
-  //     mesaVerde, mesaVerde, mesaVerde
-  //   ],
-  // date: "March 2024",
-  //   links: {
-  //     repo: "https://github.com/YassineBenAbdelaziz/CPC-Platform",
-  //     demo: "https://google.com"
-  //   }
-  // },
   {
-    id: 2,
+    id: 1, 
     type: "web",
-    title: "Mesa Verde Bank",
-    description: "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
+    title: "CPC Enicarthage",
+    description: `This platform is crafted as a problem-solving hub, enabling
+      users to tackle challenges and engage in competitions to earn
+      points. It's built with a modern tech stack: ReactJS, ExpressJS
+      and PostgreSQL. To enhance scalability and integration, Docker
+      is used to seamlessly attach an external judging API, while Redis
+      provides streamlines session logins.`,
     images: [
-      mesaVerde, mesa1, mesa3, mesa2, mesa4
+      cpc, cpc1, cpc2, cpc3, cpc4, cpc5, cpc6, cpc7, cpc8, cpc9
     ],
-    video: "https://github.com/jebalirami7/mesa-verde-bank/assets/138411253/a5f08b26-c3e7-4254-b9a1-5207f44d318d",
-    date: "October 2023 - December 2023",
+    date: "Since June 2023",
     links: {
-      repo: "https://github.com/jebalirami7/mesa-verde-bank",
-      demo: "https://webproject-pied.vercel.app/"
+      repo: "https://github.com/YassineBenAbdelaziz/CPC-Platform",
     }
   },
   {
-    id: 3,
+    id: 2,
     type: "desktop",
     title: "Classic Donkey Kong",
     description: `Classic Donkey Kong arcade game, built using Java and JavaFX for graphics.
@@ -59,6 +58,21 @@ export const projects = [
       repo: "https://github.com/jebalirami7/Classic-Donkey-Kong",
     }
   },
+  {
+    id: 3,
+    type: "web",
+    title: "Mesa Verde Bank",
+    description: "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
+    images: [
+      mesaVerde, mesa1, mesa3, mesa2, mesa4
+    ],
+    video: "https://github.com/jebalirami7/mesa-verde-bank/assets/138411253/a5f08b26-c3e7-4254-b9a1-5207f44d318d",
+    date: "October 2023 - December 2023",
+    links: {
+      repo: "https://github.com/jebalirami7/mesa-verde-bank",
+      demo: "https://webproject-pied.vercel.app/"
+    }
+  },
 ];
 
 export const Projects = () => {
@@ -71,11 +85,17 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>
-                  {/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. */}
-                </p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                <h2 style={{marginBottom: "50px"}}>Projects</h2>
+                <Row>
+                  {
+                    projects.map((project, index) => {
+                      return (
+                        <ProjectCard key={index} {...project} />
+                      )
+                    })
+                  }
+                </Row>
+                {/* <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Web Applications</Nav.Link>
@@ -131,7 +151,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                   </Tab.Content>
-                </Tab.Container>
+                </Tab.Container> */}
               </div>}
             </TrackVisibility>
           </Col>

@@ -21,7 +21,7 @@ export const ProjectCard = ({ id, title, description, images, links }) => {
               <Github size={25} />
               Source Code
             </button> */}
-            <Link to={`/projects/${title}`} target="_blank">
+            <Link to={`/projects/${id}`} target="_blank">
               <button>
                 View More Details
               </button>

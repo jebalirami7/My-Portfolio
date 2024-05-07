@@ -586,12 +586,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-overlay button {
   font-size: large;
   font-weight: bold;
+  border-radius: 15px;
   margin: 5px;
   padding: 10px;
   color: #fff;
 }
 .proj-overlay button:hover {
-  border-radius: 15px;
   border: 2px solid #fff;
 }
 
