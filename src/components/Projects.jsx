@@ -1,32 +1,40 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 import donkeyKong from "../assets/img/projects/Donkey Kong/Classic-Donkey-Kong-Demo-Picture.png";
 import donkey1 from "../assets/img/projects/Donkey Kong/donkey1.png";
 import donkey2 from "../assets/img/projects/Donkey Kong/donkey2.png";
 import donkey3 from "../assets/img/projects/Donkey Kong/donkey3.png";
 import donkey4 from "../assets/img/projects/Donkey Kong/donkey4.png";
-import mesaVerde from "../assets/img/projects/Mesa Verde/acceuil-messa-verde.png"
-import mesa1 from "../assets/img/projects/Mesa Verde/mesa1.png"
-import mesa2 from "../assets/img/projects/Mesa Verde/mesa2.png"
-import mesa3 from "../assets/img/projects/Mesa Verde/mesa3.png"
-import mesa4 from "../assets/img/projects/Mesa Verde/mesa4.png"
-import cpc from '../assets/img/projects/CPC/cpc.png'
-import cpc1 from '../assets/img/projects/CPC/cpc1.png'
-import cpc2 from '../assets/img/projects/CPC/cpc2.png'
-import cpc3 from '../assets/img/projects/CPC/cpc3.png'
-import cpc4 from '../assets/img/projects/CPC/cpc4.png'
-import cpc5 from '../assets/img/projects/CPC/cpc5.png'
-import cpc6 from '../assets/img/projects/CPC/cpc6.png'
-import cpc7 from '../assets/img/projects/CPC/cpc7.png'
-import cpc8 from '../assets/img/projects/CPC/cpc8.png'
-import cpc9 from '../assets/img/projects/CPC/cpc9.png'
+import mesaVerde from "../assets/img/projects/Mesa Verde/acceuil-messa-verde.png";
+import mesa1 from "../assets/img/projects/Mesa Verde/mesa1.png";
+import mesa2 from "../assets/img/projects/Mesa Verde/mesa2.png";
+import mesa3 from "../assets/img/projects/Mesa Verde/mesa3.png";
+import mesa4 from "../assets/img/projects/Mesa Verde/mesa4.png";
+import cpc from "../assets/img/projects/CPC/cpc.png";
+import cpc1 from "../assets/img/projects/CPC/cpc1.png";
+import cpc2 from "../assets/img/projects/CPC/cpc2.png";
+import cpc3 from "../assets/img/projects/CPC/cpc3.png";
+import cpc4 from "../assets/img/projects/CPC/cpc4.png";
+import cpc5 from "../assets/img/projects/CPC/cpc5.png";
+import cpc6 from "../assets/img/projects/CPC/cpc6.png";
+import cpc7 from "../assets/img/projects/CPC/cpc7.png";
+import cpc8 from "../assets/img/projects/CPC/cpc8.png";
+import cpc9 from "../assets/img/projects/CPC/cpc9.png";
+import enicarLearning from "../assets/img/projects/Enicar Learning/enicarLearning.png";
+import enicarLearning1 from "../assets/img/projects/Enicar Learning/enicarLearning1.png";
+import enicarLearning2 from "../assets/img/projects/Enicar Learning/enicarLearning2.png";
+import enicarLearning3 from "../assets/img/projects/Enicar Learning/enicarLearning3.png";
+import enicarLearning4 from "../assets/img/projects/Enicar Learning/enicarLearning4.png";
+import enicarLearning5 from "../assets/img/projects/Enicar Learning/enicarLearning5.png";
+import enicarLearning6 from "../assets/img/projects/Enicar Learning/enicarLearning6.png";
+import enicarLearning7 from "../assets/img/projects/Enicar Learning/enicarLearning7.png";
+import enicarLearning8 from "../assets/img/projects/Enicar Learning/enicarLearning8.png";
 
 export const projects = [
   {
-    id: 1, 
-    type: "web",
+    id: 1,
     title: "CPC Enicarthage",
     shortDescription: "A Problem Solving Platform.",
     description: `This platform is crafted as a problem-solving hub, enabling
@@ -35,70 +43,82 @@ export const projects = [
       and PostgreSQL. To enhance scalability and integration, Docker
       is used to seamlessly attach an external judging API, while Redis
       provides streamlines session logins.`,
-    images: [
-      cpc, cpc1, cpc2, cpc3, cpc4, cpc5, cpc6, cpc7, cpc8, cpc9
-    ],
+    images: [cpc, cpc1, cpc2, cpc3, cpc4, cpc5, cpc6, cpc7, cpc8, cpc9],
     date: "Since June 2023",
     links: {
       repo: "https://github.com/YassineBenAbdelaziz/CPC-Platform",
-    }
+    },
   },
   {
     id: 2,
-    type: "desktop",
     title: "Classic Donkey Kong",
     shortDescription: "A 2D Arcade Game.",
     description: `Classic Donkey Kong arcade game, built using Java and JavaFX for graphics.
       In this game, players control Mario as they navigate through a series of increasingly challenging levels to rescue Princess Peach from the clutches of Donkey Kong. 
       Dodge barrels, climb ladders, and leap over obstacles to reach the top of each level and confront Donkey Kong himself.`,
-    images: [
-      donkeyKong, donkey1, donkey2, donkey3, donkey4
-    ],
-    video: "https://github.com/jebalirami7/Classic-Donkey-Kong/assets/138411253/5923a2a7-d9f9-44f3-b6c2-c3cdb9e75b31",
+    images: [donkeyKong, donkey1, donkey2, donkey3, donkey4],
+    video:
+      "https://github.com/jebalirami7/Classic-Donkey-Kong/assets/138411253/5923a2a7-d9f9-44f3-b6c2-c3cdb9e75b31",
     date: "October 2023 - December 2023",
     links: {
       repo: "https://github.com/jebalirami7/Classic-Donkey-Kong",
-    }
+    },
   },
   {
     id: 3,
-    type: "web",
     title: "Mesa Verde Bank",
     shortDescription: "A Bank Customer Complaint Management System.",
-    description: "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
-    images: [
-      mesaVerde, mesa1, mesa3, mesa2, mesa4
-    ],
-    video: "https://github.com/jebalirami7/mesa-verde-bank/assets/138411253/a5f08b26-c3e7-4254-b9a1-5207f44d318d",
+    description:
+      "The Bank Customer Complaint Management System is a web-based application developed using the MEAN stack to facilitate the efficient handling of complaints from individual retail customers of a bank. The system aims to streamline the complaint resolution process, enhance communication between customers and bank representatives, and ultimately improve customer satisfaction.",
+    images: [mesaVerde, mesa1, mesa3, mesa2, mesa4],
+    video:
+      "https://github.com/jebalirami7/mesa-verde-bank/assets/138411253/a5f08b26-c3e7-4254-b9a1-5207f44d318d",
     date: "October 2023 - December 2023",
     links: {
       repo: "https://github.com/jebalirami7/mesa-verde-bank",
-      demo: "https://webproject-pied.vercel.app/"
-    }
+      demo: "https://webproject-pied.vercel.app/",
+    },
+  },
+  {
+    id: 4,
+    title: "Enicar Learninig",
+    shortDescription:
+      "A Scalable eLearning platform for instructors and students.",
+    description: `This is a platform where instructors can manage courses,
+      upload materials, and track progress. Students can browse,
+      enroll, access content, and take assessments. Spring Boot
+      handles the backend. Angular builds the sleek frontend.
+      PostgreSQL acts as the data vault.`,
+    images: [enicarLearning, enicarLearning1, enicarLearning2, enicarLearning3, enicarLearning4, enicarLearning5, enicarLearning6, enicarLearning7, enicarLearning8],
+    video:
+      "https://github.com/jebalirami7/Spring-Project/assets/138411253/13594200-b23d-4202-b7f2-14c11e5ccfc8",
+    date: "March 2024",
+    links: {
+      repo: "https://github.com/jebalirami7/Spring-Project",
+    },
   },
 ];
 
 export const Projects = () => {
-
   return (
     <section className="projects" id="projects">
       <Container>
         <Row>
           <Col size={12}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2 style={{marginBottom: "50px"}}>Projects</h2>
-                <Row>
-                  {
-                    projects.map((project, index) => {
-                      return (
-                        <ProjectCard key={index} {...project} />
-                      )
-                    })
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
                   }
-                </Row>
-                {/* <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                >
+                  <h2 style={{ marginBottom: "50px" }}>Projects</h2>
+                  <Row>
+                    {projects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                  {/* <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Web Applications</Nav.Link>
@@ -155,12 +175,13 @@ export const Projects = () => {
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container> */}
-              </div>}
+                </div>
+              )}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
       {/* <img className="background-image-right" src={colorSharp2} alt=""></img> */}
     </section>
-  )
-}
+  );
+};
