@@ -6,10 +6,12 @@ import { Home } from "./components/Home";
 import { ProjectDetails } from "./components/ProjectDetails";
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <div className="App">
+      <Analytics />
       <BrowserRouter>
         <NavBar />
         <Routes>
