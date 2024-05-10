@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import logo from "../assets/img/logo.png";
 import linkedIn from "../assets/img/linkedIn.svg";
 import github from "../assets/img/github.svg";
@@ -28,46 +29,41 @@ export const NavBar = () => {
   };
 
   return (
-    <Router>
+    // <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
+          <Link to="/" className="navbar-brand">
             <img src={logo} alt="Logo" />
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              <Nav.Link
-                href="/#home"
-                className={
-                  activeLink === "home" ? "active navbar-link" : "navbar-link"
-                }
+              <HashLink
+                to="/#home"
+                scroll={el => el.scrollIntoView({ behavior: 'smooth' })}
+                className={activeLink === "home" ? "active navbar-link nav-link" : "navbar-link nav-link"}
                 onClick={() => onUpdateActiveLink("home")}
               >
                 Home
-              </Nav.Link>
-              <Nav.Link
-                href="/#skills"
-                className={
-                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
-                }
+              </HashLink>
+              <HashLink
+                to="/#skills"
+                scroll={el => el.scrollIntoView({ behavior: 'smooth' })}
+                className={activeLink === "skills" ? "active navbar-link nav-link" : "navbar-link nav-link"}
                 onClick={() => onUpdateActiveLink("skills")}
               >
                 Skills
-              </Nav.Link>
-              <Nav.Link
-                href="/#projects"
-                className={
-                  activeLink === "projects"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
+              </HashLink>
+              <HashLink
+                to="/#projects"
+                scroll={el => el.scrollIntoView({ behavior: 'smooth' })}
+                className={activeLink === "projects" ? "active navbar-link nav-link" : "navbar-link nav-link"}
                 onClick={() => onUpdateActiveLink("projects")}
               >
                 Projects
-              </Nav.Link>
+              </HashLink>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -95,6 +91,6 @@ export const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
+    // </Router>
   );
 };
