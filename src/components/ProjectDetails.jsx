@@ -1,8 +1,8 @@
+import { useEffect, useRef, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { PlayFill, Github } from 'react-bootstrap-icons';
 import Carousel from "react-multi-carousel";
 import { projects } from "./Projects"
-import { useEffect, useRef } from "react";
 
 export const ProjectDetails = () => {
     const responsive = {
