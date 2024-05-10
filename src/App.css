@@ -365,7 +365,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Project Css ************/
 .project-page {
-  padding: 200px 100px 0 100px;
+  padding: 200px 100px 20px 100px;
   position: relative;
   
   .project-bx {
@@ -440,7 +440,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     }
   }
   @media (max-width: 1024px) {
-    padding: 150px 20px 0 20px;
+    padding: 150px 20px 20px 20px;
     .project-bx {
       display: block;
       padding: 30px;
