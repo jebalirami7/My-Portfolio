@@ -81,7 +81,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Enicar Learninig",
+    title: "Enicar Learning",
     shortDescription:
       "A Scalable eLearning platform for instructors and students.",
     description: `This is a platform where instructors can manage courses,
